@@ -1,0 +1,135 @@
+$gl_green: #2dcda1;
+$gl_blue: #00b1ff;
+$gl_blue_v1: #24a6df;
+
+html, body {
+  height: 100%;
+}
+
+html {
+  //overflow-y: scroll;
+  //overflow-x: hidden;
+  overflow: hidden;
+  font-size: 10px;
+
+  @include respond-to-min($resp_step_2) {
+
+  }
+}
+
+body {
+  font: 1.4em/1.2 $AvenirNextRegular;
+  color: $default_t_color;
+}
+
+.hide {
+  display: none !important;
+}
+
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.mb {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+}
+
+.cb {
+  clear: both;
+}
+
+.wrapper {
+  display: none;
+  position: relative;
+  min-height: 100%;
+  font-size: .55em;
+  padding: 5em 0;
+  height: 100%;
+  background: url(../i/BG-1.png) no-repeat 50%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  @include respond-to-max($resp_step_2) {
+    text-align: center;
+    font-size: .8em;
+    padding: 1em 0;
+  }
+
+}
+
+.base {
+  padding-bottom: 150px;
+}
+
+.preloader {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 64px;
+    height: 64px;
+    margin: -32px 0 0 -32px;
+  }
+}
+
+.gl_table {
+  display: table;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.gl_table_cell {
+  display: table-cell;
+  vertical-align: middle;
+  height: 100%;
+}
+
+.section_inner {
+  width: 100%;
+  //max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2.9em;
+}
+
+// **********  text
+
+.text_center {
+  text-align: center;
+}
+
+.text_right {
+  text-align: right;
+}
+
+.text_left {
+  text-align: left;
+}
+
+.text_upper {
+  text-transform: uppercase;
+}

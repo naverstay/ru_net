@@ -1,0 +1,45 @@
+.subscribe_form {
+  margin: 0 auto;
+  max-width: 26em;
+  padding-bottom: 5.2em;
+
+  .form_cell {
+    display: inline-block;
+    vertical-align: top;
+    min-width: 16.2em;
+    margin: 0 auto 1.2em;
+  }
+
+  @include respond-to-min($resp_step_2) {
+    padding-bottom: 7em;
+    max-width: 20em;
+
+    .form_cell {
+      width: 80%;
+      margin-bottom: 1em;
+      min-width: 18.8em;
+    }
+  }
+}
+
+.form_cell {
+
+}
+
+.f_input {
+  display: block;
+  width: 100%;
+
+  &.input_v1 {
+    @include transition_all(border .3s);
+    padding: .25em;
+    color: #fff;
+    border-bottom: .1em solid rgba(255, 255, 255, .56);
+
+    &:focus {
+      border-bottom-color: rgba(255, 255, 255, .86);
+    }
+  }
+}
+
+

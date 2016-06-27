@@ -1,0 +1,36 @@
+//************  buttons
+
+.btn_v1 {
+  height: 2em;
+
+  &.subscribe_btn {
+    cursor: pointer;
+    border-radius: 1em;
+    display: inline-block;
+    vertical-align: top;
+    //line-height: 2;
+    padding: 0 .8em;
+
+    span {
+      font-size: .86em;
+    }
+
+    @include respond-to-min($resp_step_2) {
+      span {
+        font-size: .68em;
+      }
+    }
+  }
+}
+
+.gray_btn {
+  @include transition_all(background .3s, color .3s);
+  color: #fff;
+  background: rgba(35, 72, 117, .13);
+
+  &:hover {
+    background: rgba(35, 72, 117, .53);
+  }
+}
+
+

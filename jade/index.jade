@@ -1,0 +1,29 @@
+include mixins
+doctype html
+html(lang='ru')
+    +dev_head('Ru.net')
+
+    body
+        .preloader
+            img(src='i/preloader.gif')
+        .wrapper
+            .gl_table
+                .gl_table_cell
+                    +header()
+                    
+                    .section_inner
+                        .subscribe_form
+                            form(action='#')
+                                .text_center: a.logo(href='#')
+                                    img(src='i/Logo.png')
+                                    
+                                .form_cell
+                                    input.f_input.input_v1.text_center(placeholder='Эл. Почта')
+                                
+                                .form_cell
+                                    button.btn_v1.gray_btn.subscribe_btn: span.mb ПОДПИСАТЬСЯ НА ОТКРЫТИЕ
+
+                    +footer()
+                    
+                    
+                    
