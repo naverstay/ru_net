@@ -53,11 +53,13 @@ $(window).on('resize', function () {
 
 }).on('load', function () {
 
-    windowRisize();
+    windowRisize(function () {
+        $('.preloader').fadeOut();
+    });
 
 });
 
-function windowRisize() {
+function windowRisize(callback) {
 
     if (Modernizr.mq('(max-device-width: ' + max_device_width + 'px)')) {
         if (Modernizr.mq('(orientation: portrait)')) {
@@ -72,5 +74,9 @@ function windowRisize() {
     var newFZ = browserWindow.width() / baseWindowWidth * baseFZ;
 
     $body.css('font-size', Math.max(minFZ, Math.min(maxFZ, newFZ)) + 'em');
-    
+
+    if (typeof callback == 'function') {
+        callback();
+    }
+
 }

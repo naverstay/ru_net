@@ -54,7 +54,6 @@ body {
 }
 
 .wrapper {
-  display: none;
   position: relative;
   min-height: 100%;
   font-size: .55em;
@@ -85,6 +84,7 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
+  background: #fff;
 
   img {
     position: absolute;
@@ -111,9 +111,14 @@ body {
 
 .section_inner {
   width: 100%;
-  //max-width: 800px;
   margin: 0 auto;
   padding: 0 2.9em;
+}
+
+.mob_hidden {
+  @include respond-to-max($resp_step_2) {
+    display: none !important;
+  }
 }
 
 // **********  text

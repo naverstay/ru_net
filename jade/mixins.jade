@@ -18,33 +18,36 @@ mixin loop_while(counter)
     while i < counter
         -i++;
         block
-
-
-
+        
 mixin header()
     div.header
         .section_inner.clearfix
             .forum_label
-                p Форум Русскоязычного Сообщества
+                p Форум Русскоязычного Сообщества Грузии
 
             .disclaim_holder
                 a.gl_link.inner_link.link_white_red.disclaimOpener(href='#') Дисклеймер
                 .disclaim_wrapper
                     p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                            
 
 mixin footer ()
     .footer
         .section_inner.clearfix
-            .subscribes
-                p Подписано Всего 
-                    a.gl_link.link_white_red.external_link(href='#') 310
-                    |  Сегодня 
-                    a.gl_link.link_white_red.external_link(href='#') 12
-
             .footer_adds
                 p
                     a.gl_link.link_white_red.external_link(href='#') Требуются Модераторы
+            
+            .subscribes
+                .disclaim_holder
+                    a.gl_link.inner_link.link_white_red.disclaimOpener(href='#') Дисклеймер
+                    .disclaim_wrapper
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                        
+                p.mob_hidden Подписано Всего 
+                    a.gl_link.link_white_red.external_link(href='#') 310
+                    span.mob_hidden
+                        |  Сегодня 
+                        a.gl_link.link_white_red.external_link(href='#') 12
 
             .copyright
                 p © 2016 Ru.Net.Ge
